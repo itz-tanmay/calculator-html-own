@@ -20,7 +20,11 @@ buttons.forEach((button) => {
       } catch (error) {
         display.value = "BKL🤬";
       }
-    } else {
+    } else if(button.value === "-1"){
+        let currentExp = parseInt(display.value);
+        display.value = currentExp * parseInt(button.value)
+    }
+    else {
       display.value += button.value;
     }
   });
